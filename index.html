@@ -6,7 +6,7 @@
       background-color: #f2f2f2; 
       border: 1px solid #f2f2f2;
       border-radius: 2px;
-      padding: 0px 16px;
+      padding: 8px 16px;
       text-align: center;
       text-decoration: none;
       color: #757575;
@@ -20,22 +20,53 @@
       cursor: pointer;
 }
 
+ .button:hover {
+      color: #222;
+      border: 1px solid #c6c6c6;
+      box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+}
+
+ .inner {
+      display: inline-block;
+}
+
+ .search_box {
+      border:medium none;
+      outline: medium none;
+      padding: 0px;
+      margin: 0px;
+      height: auto;
+      width: auto;
+      maxlength: "2048";
+      role: combobox;
+      value: "";
+      type: text;
+}
+ 
+ .search_box_frame {
+      height: 38px;
+      width: 484px;
+      vertical-align: top;
+      border: 1px solid #d9d9d9;
+      background-color: #fff;
+}
 </style>
 
 </head>
 
 <body>
 
-	<div id="image">
-		<img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png">
-	</div>
-	<div id="input">
-		<form>
-		<!--Research the search box here. It looks like the input is either being wrapped with another field or maybe a padded border? The input field itself has a "medium none". What does that mean. -->
-			<input id="search_box" style="border: medium none; outline: medium none; padding 0px; margin 0px; height: auto; width:100%;"  maxlength="2048" role="combobox" name="search_box" title="Search" value="" type="text"></input>
-			
-		</form>
-	</div>
+ <div id="image">
+  <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png">
+ </div>
+ <div id="input">
+  <form>
+  <!--Research the search box here. It looks like the input is either being wrapped with another field or maybe a padded border? The input field itself has a "medium none". What does that mean. -->
+   <div class="search_box_frame"><input class="search_box"></input></div>
+   <div class="inner"><button class="button">Google Search</button></div>
+   <div class="inner"><button class="button">I'm Feeling Lucky</button></div>
+  </form>
+ </div>
 
 
 <footer></footer>
